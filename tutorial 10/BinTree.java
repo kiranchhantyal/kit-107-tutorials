@@ -144,10 +144,7 @@ public class BinTree implements BinTreeInterface
 		int lh;	// height of left sub-tree
 		int rh;	// height of right sub-tree
 		
-		return 10;  // DELETE ME AND IMPLEMENT THE ALGORITHM BELOW
 		
-		// if tree is empty
-			// result is 0, return it
 		// otherwise...
 			// get left sub-tree
 			// get right sub-tree
