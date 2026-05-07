@@ -143,10 +143,41 @@ public class BinTree implements BinTreeInterface
 		BinTree r;	// right sub-tree
 		int lh;	// height of left sub-tree
 		int rh;	// height of right sub-tree
-		
-		
+
+		if (isEmpty())
+		{
+			return 0;
+		}
+		else
+		{
+			// get left sub-tree
+			l=getLeft();
+
+			// get right sub-tree
+			r=getRight();
+
+			// calculate height of left sub-tree
+			lh=l.height();
+
+			// calculate height of right sub-tree
+			rh=r.height();
+
+			// if the height of the left sub-tree exceeds the height of the right
+			if (lh>rh)
+			{
+				// result is height of the left sub-tree plus 1, return it
+				return lh+1;
+			}
+			else
+			{
+				// result is height of the right sub-tree plus 1, return it
+				return rh+1;
+			}
+		}
+
 		// otherwise...
 			// get left sub-tree
+			
 			// get right sub-tree
 			// calculate height of left sub-tree
 			// calculate height of right sub-tree
