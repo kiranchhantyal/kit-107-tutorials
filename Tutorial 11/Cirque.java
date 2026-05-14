@@ -21,7 +21,9 @@ public class Cirque implements CirqueInterface
  	*/
 	public Cirque(Object o)
 	{
-COMPLETE ME!
+		cursor = new DNode(o);
+		cursor.setNext(cursor);
+		cursor.setPrev(cursor);
 	}
  
 	/**
