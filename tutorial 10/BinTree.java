@@ -196,19 +196,22 @@ public class BinTree implements BinTreeInterface
 	{
 		BinTree l;	// left sub-tree
 		BinTree r;	// right sub-tree
-			
-		n=0;  // DELETE ME AND IMPLEMENT THE ALGORITHM BELOW
-		
-		// if tree isn't empty
+		if (!isEmpty())
+		{
 			// get left sub-tree
+			l=getLeft();
 			// get right sub-tree
-
+			r=getRight();
 			// decorate left sub-tree and update result (n)
-				
+			n=l.decorate(n);
 			// label current node with n
+			root.setLabel(n);
 			// increment label variable n
-
+			n++;	
 			// decorate right sub-tree and update result (n)
+			n=r.decorate(n);		
+
+		}
 			
 		// return next label value to be used, n
 		return n;
