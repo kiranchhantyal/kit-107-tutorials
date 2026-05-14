@@ -41,7 +41,22 @@ public class Cirque implements CirqueInterface
 	*/
 	public void add(Object o)
 	{
-COMPLETE ME!
+		DNode newNode = new DNode(o);
+		if (isEmpty())
+		{
+			newNode.setNext(newNode);
+			newNode.setPrev(newNode);
+			cursor = newNode;
+		}
+		else {
+			DNode previous = cursor.getPrev();
+
+			newNode.setNext(cursor);
+			newNode.setPrev(previous);
+			cursor.setPrev(newNode);
+			cursor.setNext(newNode);
+		}
+
 	}
 
 	/**
