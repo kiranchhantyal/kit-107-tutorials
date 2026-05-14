@@ -40,7 +40,7 @@ public class Cirque implements CirqueInterface
 	* @param o value to be added to Cirque
 	*/
 	public void add(Object o)
-	{
+	{ 
 		DNode newNode = new DNode(o);
 		if (isEmpty())
 		{
@@ -48,14 +48,15 @@ public class Cirque implements CirqueInterface
 			newNode.setPrev(newNode);
 			cursor = newNode;
 		}
-		else {
+		else
+		{
 			DNode previous = cursor.getPrev();
-
 			newNode.setNext(cursor);
 			newNode.setPrev(previous);
+			previous.setNext(newNode);
 			cursor.setPrev(newNode);
-			cursor.setNext(newNode);
 		}
+	}
 
 	}
 
