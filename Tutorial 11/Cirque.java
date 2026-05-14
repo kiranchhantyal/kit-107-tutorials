@@ -58,7 +58,7 @@ public class Cirque implements CirqueInterface
 		}
 	}
 
-	}
+	
 
 	/**
 	* Remove current item from Cirque selecting the next one
@@ -69,11 +69,24 @@ public class Cirque implements CirqueInterface
 		{
 			throw new EmptyCirqueException();
 		}
-COMPLETE ME!
+if (cursor.getNext() == cursor)
+		{
+			cursor = null;
+		}
+		else
+		{
+			DNode previous = cursor.getPrev();
+			DNode next = cursor.getNext();
+
+			previous.setNext(next);
+			next.setPrev(previous);
+
+			cursor = next;
+		}
 	}
 
 	/**
-	* Return current item from Cirque selecting the next one
+	** Return current item from Cirque selecting the next one
 	*/
 	public Object nextOne() throws EmptyCirqueException
 	{
