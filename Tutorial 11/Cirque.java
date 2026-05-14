@@ -94,7 +94,9 @@ if (cursor.getNext() == cursor)
 		{
 			throw new EmptyCirqueException();
 		}
-COMPLETE ME!
+    Object data = cursor.getData();
+		cursor = cursor.getNext();
+		return data;
 	}
 
 	/**
