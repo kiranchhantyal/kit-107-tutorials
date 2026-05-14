@@ -32,7 +32,7 @@ public class Cirque implements CirqueInterface
 	*/
 	public boolean isEmpty()
 	{
-COMPLETE ME!
+		return (cursor == null);
 	}
 
 	/**
