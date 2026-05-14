@@ -105,6 +105,31 @@ if (cursor.getNext() == cursor)
 	*/
 	public String toString()
 	{
-COMPLETE ME!
+		
+	
+		if (!isEmpty())
+		{ return "<>";
+		}
+		String result = "<";
+			DNode current = cursor;
+			do
+			{ if(current ==  cursor)
+			{
+				result = "[" + current.getData() + "]";
+			}
+				else
+
+					{
+						result += current.getData();
+					}
+				if (current.getNext() != cursor)
+				{
+					result += ", ";
+				}
+				
+				current = current.getNext();
+			} while (current != cursor);
+		result += ">";
+		return result;
 	}
 }
